@@ -1,0 +1,19 @@
+
+## Where do I live?
+
+```{r, echo=FALSE}
+content <- paste(sep = "<br/>",
+                 "<b><a href='https://www.linkedin.com/in/megankung'>Megan's</a> place</b>",
+                 "909 Quincy St. NE #4",
+                 "Washington, D.C. 20017"
+)
+library(leaflet)
+leaflet() %>% 
+  addTiles() %>%
+  addPopups(lat = 38.938044,lng = -76.994282,
+            content,
+            options=popupOptions(closeButton=FALSE)
+            )
+  
+
+```
